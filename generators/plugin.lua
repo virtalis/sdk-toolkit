@@ -3,6 +3,7 @@ package.path = scriptDir .. "/?.lua;" .. package.path
 
 local colour = require("ansicolour")
 local luaplugin = require("luaplugin")
+local cplugin = require("cplugin")
 
 local options = {
   type = { "Lua Plugin", "C / C++ Plugin" },
@@ -85,5 +86,5 @@ end
 if stepInput[1] == 1 then
   luaplugin.generate(stepInput[3])
 elseif stepInput[1] == 2 then
-  --cplugin.generate(stepInput[3], stepInput[2])
+  cplugin.generate(stepInput[3], stepInput[2])
 end
